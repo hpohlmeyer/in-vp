@@ -1,9 +1,9 @@
 import test from 'ava';
 import { createElementStub, createDocument } from './helpers';
-import inVp from '..';
+import inVp from '../src';
 
 // Mock the browser document
-global.document = createDocument({ width: 100, height: 100 });
+(global as any).document = createDocument({ width: 100, height: 100 });
 
 const elementInVp = createElementStub({
   width: 100,

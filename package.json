@@ -4,9 +4,18 @@
   "description": "Check if elements are fully or partially visible in the viewport",
   "author": "Henning Pohlmeyer (henningpohlmeyer.com)",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "test:types": "tsc --noEmit",
+    "build": "rollup -c",
+    "prepare": "tsc",
+    "prepublishOnly": "ava"
   },
   "repository": {
     "type": "git",
@@ -21,6 +30,12 @@
   },
   "homepage": "https://github.com/hpohlmeyer/in-vp#readme",
   "devDependencies": {
-    "ava": "^1.0.1"
+    "ava": "^2.0.0",
+    "esm": "^3.2.25",
+    "rollup": "^1.14.4",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
   }
 }
