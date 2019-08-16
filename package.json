@@ -1,6 +1,6 @@
 {
   "name": "in-vp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Check if elements are fully or partially visible in the viewport",
   "author": "Henning Pohlmeyer (henningpohlmeyer.com)",
   "license": "MIT",
