@@ -14,8 +14,8 @@
     "test": "ava",
     "test:types": "tsc --noEmit",
     "build": "rollup -c",
-    "prepare": "tsc",
-    "prepublishOnly": "ava"
+    "prepare": "npm run build",
+    "prepublishOnly": "tsc --noEmit && ava"
   },
   "repository": {
     "type": "git",
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/hpohlmeyer/in-vp#readme",
   "devDependencies": {
-    "ava": "^2.0.0",
+    "ava": "^2.2.0",
     "esm": "^3.2.25",
-    "rollup": "^1.14.4",
-    "rollup-plugin-terser": "^5.0.0",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "ts-node": "^8.2.0",
-    "typescript": "^3.5.1"
+    "rollup": "^1.19.4",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
   }
 }
